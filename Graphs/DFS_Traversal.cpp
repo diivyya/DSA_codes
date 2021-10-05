@@ -8,7 +8,7 @@ void dfs(vector<int>adj[], bool vis[], int s)
 	vis[s]=true;
 	for(auto it: adj[s])
 	{
-		dfs(adj,vis,it);
+		if(!vis[it]) dfs(adj,vis,it);
 	}
 }
 int main()
