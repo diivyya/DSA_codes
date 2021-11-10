@@ -15,7 +15,7 @@ int main()
 {
 	int V,E,u,v;
 	cin>>V>>E;
-	vector<int>adj[V+1];
+	vector<int>adj[V];
 	for(int i=0;i<E;i++)
 	{
 		cin>>u>>v;
@@ -24,11 +24,11 @@ int main()
 	}
 	int s;
 	cin>>s;
-	bool vis[V+1];
+	bool vis[V];
 	memset(vis,false,sizeof(vis));
 	dfs_traversal.clear();
 	dfs(adj,vis,s);
-	for(int i=0;i<v;i++)
+	for(int i=0;i<V;i++)
 	{
 		cout<<dfs_traversal[i]<<" ";
 	}

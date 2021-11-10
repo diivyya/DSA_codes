@@ -1,3 +1,8 @@
+//Minimum number of steps required by knight to reach target
+//Time: O(n^2)
+//Space: O(n^2) 
+#include <bits/stdc++.h>
+using namespace std;
 struct cell{
         int x,y;
         int dis;
@@ -12,6 +17,7 @@ struct cell{
     }
 	int minStepToReachTarget(vector<int>&KnightPos,vector<int>&TargetPos,int N)
 	{
+		//BFS approach
 	    int dx[] = { -2, -1, 1, 2, -2, -1, 1, 2 };
         int dy[] = { -1, -2, -2, -1, 1, 2, 2, 1 };
         queue<cell>q;
